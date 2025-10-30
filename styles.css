@@ -1,0 +1,239 @@
+/* Step 3: Basic Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Step 3: Header & Navigation */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+}
+
+#hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Step 4: About Me Section */
+#about-me {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#about-me h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#about-me p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Step 4: Projects Section */
+#projects {
+  padding: 40px 20px;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#projects article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#projects img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Step 4: Skills Section */
+#skills {
+  padding: 40px 20px;
+  background-color: #eaeaea;
+}
+
+#skills h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 15px;
+}
+
+#skills li {
+  position: relative;
+  padding-left: 25px;
+  font-size: 1rem;
+}
+
+#skills li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #007acc;
+}
+
+/* Step 4: Contact Form */
+#contact {
+  padding: 40px 20px;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Step 5: Responsive Design */
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #222;
+    padding: 20px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  #projects article {
+    padding: 15px;
+  }
+
+  #skills ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Notification styles */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 1000;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Step 6: Cross-Browser Compatibility */
+input,
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
